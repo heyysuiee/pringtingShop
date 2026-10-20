@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title description">
+  <title id="title">Temporary sample artwork placeholder</title>
+  <desc id="description">A warm paper background with a stylized print card and a note to add a product photo.</desc>
+  <rect width="800" height="600" fill="#e6d7c5"/>
+  <circle cx="650" cy="126" r="164" fill="#d8b6a9" opacity=".55"/>
+  <circle cx="116" cy="510" r="185" fill="#c6a15b" opacity=".2"/>
+  <rect x="190" y="94" width="420" height="412" rx="12" fill="#f7f2ea" transform="rotate(-4 400 300)"/>
+  <rect x="237" y="150" width="326" height="208" rx="5" fill="#382820" transform="rotate(-4 400 300)"/>
+  <path d="M282 307l82-94 56 59 49-43 59 70H282z" fill="#b87968" transform="rotate(-4 400 300)"/>
+  <circle cx="466" cy="220" r="22" fill="#c6a15b" transform="rotate(-4 400 300)"/>
+  <text x="400" y="414" fill="#382820" font-family="Georgia,serif" font-size="27" text-anchor="middle">Your next idea, beautifully printed</text>
+  <text x="400" y="453" fill="#81756c" font-family="Arial,sans-serif" font-size="14" letter-spacing="3" text-anchor="middle">TEMPORARY SAMPLE ARTWORK</text>
+</svg>
