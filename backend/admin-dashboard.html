@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#382820">
+    <title>Admin dashboard | ImPRESSion Printing Works</title>
+    <link rel="stylesheet" href="/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="dashboard-page">
+        <header class="dashboard-header">
+            <a class="dashboard-brand" href="/home">
+                <img src="/frontend/image/logo-icon.png" alt="">
+                <span><strong>ImPRESSion</strong><small>PRINTING WORKS</small></span>
+            </a>
+            <form action="/admin/logout" method="post">
+                <button class="dashboard-logout" type="submit">Sign out <span aria-hidden="true">→</span></button>
+            </form>
+        </header>
+
+        <section class="dashboard-content" aria-labelledby="dashboard-title">
+            <p class="eyebrow"><span></span> ADMINISTRATION</p>
+            <h1 id="dashboard-title">Welcome to your<br><em>admin area.</em></h1>
+            <p class="dashboard-description">You are signed in. Your admin area is ready for shop management features.</p>
+
+            <div class="dashboard-card">
+                <span class="dashboard-card-icon" aria-hidden="true">✓</span>
+                <div>
+                    <h2>Access confirmed</h2>
+                    <p>Your admin login is working. Customer requests and website management are not connected yet.</p>
+                </div>
+            </div>
+
+            <a class="dashboard-home-link" href="/home">View the public website <span aria-hidden="true">↗</span></a>
+        </section>
+
+        <footer class="dashboard-footer">© 2026 ImPRESSion Printing Works</footer>
+    </main>
+</body>
+
+</html>

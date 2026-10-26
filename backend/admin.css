@@ -34,6 +34,8 @@ a {
     text-decoration: none;
 }
 
+/* Sign-in layout */
+
 .admin-page {
     display: grid;
     grid-template-columns: minmax(360px, 0.92fr) minmax(460px, 1.08fr);
@@ -52,6 +54,8 @@ a {
         var(--brown);
     color: var(--cream);
 }
+
+/* Brand panel */
 
 .brand,
 .mobile-brand {
@@ -240,6 +244,8 @@ a {
     padding: 48px 32px 24px;
 }
 
+/* Login form */
+
 .login-card {
     width: min(100%, 410px);
 }
@@ -302,6 +308,10 @@ a {
     color: #6d5630;
 }
 
+.setup-notice[hidden] {
+    display: none;
+}
+
 .setup-notice > span,
 .server-message > span {
     display: grid;
@@ -338,17 +348,13 @@ a {
     margin-top: 27px;
 }
 
-.login-form > label,
-.password-label label {
+.login-form > label {
     color: var(--brown);
     font-size: 12px;
     font-weight: 700;
 }
 
 .password-label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: 8px;
 }
 
@@ -454,6 +460,170 @@ a {
     color: #a3978c;
     font-size: 10px;
 }
+
+/* Admin dashboard */
+
+.dashboard-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 32px clamp(24px, 7vw, 100px);
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-brand img {
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--brown);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dashboard-brand strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.dashboard-brand small {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dashboard-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--brown);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-logout:hover {
+    border-color: var(--pink);
+}
+
+.dashboard-logout span {
+    color: var(--pink);
+}
+
+.dashboard-content {
+    width: min(100%, 780px);
+    margin: auto;
+    padding: 72px 0;
+}
+
+.dashboard-content .eyebrow {
+    color: var(--pink);
+}
+
+.dashboard-content h1 {
+    margin: 16px 0 12px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    line-height: 1.08;
+}
+
+.dashboard-content h1 em {
+    color: var(--pink);
+    font-weight: 500;
+}
+
+.dashboard-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.dashboard-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 36px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 10px 32px rgba(56, 40, 32, 0.06);
+}
+
+.dashboard-card-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    place-items: center;
+    border-radius: 11px;
+    background: #edf3ed;
+    color: #477653;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.dashboard-card h2 {
+    margin: 1px 0 6px;
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.dashboard-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.dashboard-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-home-link:hover {
+    text-decoration: underline;
+}
+
+.dashboard-footer {
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: #a3978c;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Responsive layout */
 
 @media (max-width: 850px) {
     .admin-page {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#382820">
     <title>Admin sign in | ImPRESSion Printing Works</title>
-    <link rel="stylesheet" href="/frontend/admin.css">
+    <link rel="stylesheet" href="/admin.css">
     <script src="/frontend/admin.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,9 +64,9 @@
                     <p class="login-description">Enter your details to continue to the admin area.</p>
                 </div>
 
-                <div class="setup-notice" role="status">
+                <div class="setup-notice" role="status" __ADMIN_SETUP_HIDDEN__>
                     <span aria-hidden="true">i</span>
-                    <p>Admin authentication is not set up yet. This form is a design preview and will not sign you in.</p>
+                    <p>__ADMIN_SETUP_MESSAGE__</p>
                 </div>
 
                 <div class="server-message" role="alert" __ADMIN_MESSAGE_HIDDEN__>
@@ -86,9 +86,7 @@
                             autocomplete="username" required>
                     </div>
 
-                    <div class="password-label">
-                        <label for="password">Password</label>
-                    </div>
+                    <label class="password-label" for="password">Password</label>
                     <div class="input-wrap">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor"
