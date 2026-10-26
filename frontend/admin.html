@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#382820">
+    <title>Admin sign in | ImPRESSion Printing Works</title>
+    <link rel="stylesheet" href="/frontend/admin.css">
+    <script src="/frontend/admin.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="admin-page">
+        <section class="brand-panel" aria-label="ImPRESSion Printing Works">
+            <a class="brand" href="/home" aria-label="ImPRESSion home">
+                <img src="/frontend/image/logo-icon.png" alt="">
+                <span><strong>ImPRESSion</strong><small>PRINTING WORKS</small></span>
+            </a>
+
+            <div class="brand-message">
+                <span class="eyebrow"><span></span> ADMINISTRATION</span>
+                <h1>Good work<br>starts with<br><em>good details.</em></h1>
+                <p>A dedicated space for keeping your print shop organized and your customers inspired.</p>
+            </div>
+
+            <div class="brand-decoration" aria-hidden="true">
+                <div class="paper paper-back"></div>
+                <div class="paper paper-front">
+                    <span>MADE WITH CARE</span>
+                    <span class="paper-mark">I.</span>
+                    <span>ImPRESSion<br>Printing Works</span>
+                </div>
+                <span class="decoration-dot dot-one"></span>
+                <span class="decoration-dot dot-two"></span>
+            </div>
+
+            <a class="back-link" href="/home"><span aria-hidden="true">←</span> Back to the website</a>
+        </section>
+
+        <section class="login-panel" aria-labelledby="login-title">
+            <div class="login-card">
+                <div class="mobile-brand">
+                    <img src="/frontend/image/logo-icon.png" alt="">
+                    <span><strong>ImPRESSion</strong><small>PRINTING WORKS</small></span>
+                </div>
+
+                <div class="login-heading">
+                    <span class="login-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3.5 19 6v5.3c0 4.4-2.9 7.8-7 9.2-4.1-1.4-7-4.8-7-9.2V6l7-2.5Z"
+                                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                            <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <p class="eyebrow">WELCOME BACK</p>
+                    <h2 id="login-title">Admin sign in</h2>
+                    <p class="login-description">Enter your details to continue to the admin area.</p>
+                </div>
+
+                <div class="setup-notice" role="status">
+                    <span aria-hidden="true">i</span>
+                    <p>Admin authentication is not set up yet. This form is a design preview and will not sign you in.</p>
+                </div>
+
+                <div class="server-message" role="alert" __ADMIN_MESSAGE_HIDDEN__>
+                    <span aria-hidden="true">!</span>
+                    <p>__ADMIN_MESSAGE__</p>
+                </div>
+
+                <form class="login-form" action="/admin" method="post">
+                    <label for="username">Username</label>
+                    <div class="input-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6" />
+                            <path d="M5 20c.4-3.4 3.1-5.5 7-5.5s6.6 2.1 7 5.5" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" />
+                        </svg>
+                        <input type="text" id="username" name="username" placeholder="Enter your username"
+                            autocomplete="username" required>
+                    </div>
+
+                    <div class="password-label">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor"
+                                stroke-width="1.6" />
+                            <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                        </svg>
+                        <input type="password" id="password" name="password" placeholder="Enter your password"
+                            autocomplete="current-password" required>
+                        <button class="password-toggle" type="button" aria-controls="password"
+                            aria-label="Show password" aria-pressed="false">Show</button>
+                    </div>
+
+                    <button class="submit-button" type="submit">Sign in <span aria-hidden="true">→</span></button>
+                </form>
+
+                <p class="login-footer">Need help? <a href="/contact">Contact the shop</a></p>
+            </div>
+            <p class="copyright">© 2026 ImPRESSion Printing Works</p>
+        </section>
+    </main>
+</body>
+
+</html>

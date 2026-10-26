@@ -1,0 +1,63 @@
+<section class="showcase-section" id="services" aria-labelledby="services-title">
+    <div class="showcase-inner">
+        <header class="showcase-header">
+            <div>
+                <h2 id="services-title">Explore printing services</h2>
+            </div>
+            <p>Browse service examples and request a custom quote. Prices are not shown because each request may
+                need a different estimate.</p>
+        </header>
+
+        <div class="gallery-service-picker" role="tablist" aria-label="Printing service categories">
+            <button class="gallery-service-tap active" id="tab-invitation" type="button" role="tab" aria-selected="true"
+                aria-controls="service-featured" tabindex="0" data-gallery-service="invitation">Invitation</button>
+            <button class="gallery-service-tap" id="tab-souvenir" type="button" role="tab" aria-selected="false"
+                aria-controls="service-featured" tabindex="-1" data-gallery-service="souvenir">Souvenir</button>
+            <button class="gallery-service-tap" id="tab-sticker" type="button" role="tab" aria-selected="false"
+                aria-controls="service-featured" tabindex="-1" data-gallery-service="sticker">Sticker
+                printing</button>
+            <button class="gallery-service-tap" id="tab-sintra-board" type="button" role="tab" aria-selected="false"
+                aria-controls="service-featured" tabindex="-1" data-gallery-service="sintra-board">Sintra board</button>
+            <button class="gallery-service-tap" id="tab-party-needs" type="button" role="tab" aria-selected="false"
+                aria-controls="service-featured" tabindex="-1" data-gallery-service="party-needs">Party needs</button>
+            <button class="gallery-service-tap" id="tab-large-format" type="button" role="tab" aria-selected="false"
+                aria-controls="service-featured" tabindex="-1" data-gallery-service="large-format">Tarpaulins &amp;
+                large format</button>
+        </div>
+
+        <article class="featured-service" id="service-featured" role="tabpanel" aria-labelledby="tab-invitation"
+            tabindex="0">
+            <div class="featured-copy">
+                <p class="showcase-kicker" id="featured-kicker">FOR LIFE'S SPECIAL MOMENTS</p>
+                <h3 id="featured-title">Invitation Printing</h3>
+                <p id="featured-description">Set the tone for birthdays, weddings, and christenings with a
+                    custom invitation design.</p>
+                <p class="demo-label">Sample design preview · Request a quote for pricing</p>
+                <div class="featured-actions">
+                    <a class="showcase-btn showcase-btn-light" href="/finished-works">View samples <span
+                            aria-hidden="true">↓</span></a>
+                    <button class="showcase-btn" type="button" data-request-service="invitation">Request a quote
+                        <span aria-hidden="true">↗</span></button>
+                </div>
+            </div>
+            <img class="featured-image" id="featured-image" src="/frontend/image/Wedding-Invitation-Sample.svg"
+                alt="Temporary invitation sample design preview">
+        </article>
+
+        <section class="sample-gallery" id="finished-works" aria-labelledby="sample-gallery-title">
+            <div class="sample-gallery-heading">
+                <div>
+                    <p class="showcase-kicker">Explore the designs</p>
+                    <h3 id="sample-gallery-title">Invitation samples</h3>
+                </div>
+                <div>
+                    <nav class="catalog-shortcuts" aria-label="More printing information">
+                        <a href="/finished-works">Browse portfolio samples</a>
+                        <a href="/contact">How to order</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="sample-grid" id="sample-grid" aria-live="polite"></div>
+        </section>
+    </div>
+</section>

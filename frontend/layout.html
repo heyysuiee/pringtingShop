@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ImPRESSion PrintShop</title>
+
+    <link rel="stylesheet" href="/frontend/home.css">
+    <script src="/frontend/home.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header" id="home">
+        <nav class="navbar">
+
+            <a href="/home" class="logo" aria-label="ImPRESSion PrintShop home">
+                <img src="/frontend/image/logo-icon.png" alt="ImPRESSion Printing Works">
+            </a>
+
+            <div class="logo-text">
+                <h1>ImPRESSion</h1>
+                <p>Printing Works</p>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="/home" class="__HOME_ACTIVE__">Home</a>
+                <a href="/services" class="__SERVICES_ACTIVE__">Our Services</a>
+                <a href="/finished-works" class="__WORKS_ACTIVE__">Sample Works</a>
+                <a href="/contact" class="__CONTACT_ACTIVE__">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu"
+                    aria-controls="navLinks" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+{{content}}
+
+<dialog class="sample-dialog" id="sample-dialog" aria-labelledby="sample-dialog-title">
+            <button class="dialog-close" type="button" data-close-dialog aria-label="Close sample details">×</button>
+            <img id="sample-dialog-image" src="/frontend/image/temporary-sample.svg" alt="">
+            <div class="dialog-copy">
+                <p class="showcase-kicker" id="sample-dialog-category"></p>
+                <h2 id="sample-dialog-title"></h2>
+                <p id="sample-dialog-description"></p>
+                <p class="demo-label">Demonstration sample · Pricing available by quote</p>
+                <button class="showcase-btn" type="button" id="sample-dialog-request">Request this design <span
+                        aria-hidden="true">↗</span></button>
+            </div>
+        </dialog>
+
+        <dialog class="request-dialog" id="request-dialog" aria-labelledby="request-dialog-title">
+            <div class="request-dialog-header">
+                <div>
+                    <p class="showcase-kicker">Custom printing request</p>
+                    <h2 id="request-dialog-title">Request a quote</h2>
+                </div>
+                <button class="dialog-close" type="button" data-close-dialog aria-label="Close quote request">×</button>
+            </div>
+            <p class="demo-notice"><strong>Frontend demo:</strong> this form does not send or save your information.
+                Connect a backend to accept requests and uploads. No account system is connected yet.</p>
+            <form id="request-form">
+                <div class="request-fields">
+                    <label>Service category
+                        <select id="request-category" name="category" required></select>
+                    </label>
+                    <label>Product or sample
+                        <select id="request-sample" name="sample" required></select>
+                    </label>
+                    <label>Your name
+                        <input name="customerName" autocomplete="name" required>
+                    </label>
+                    <label>Email address
+                        <input name="email" type="email" autocomplete="email" required>
+                    </label>
+                    <label>Quantity
+                        <input name="quantity" type="number" min="1" step="1" value="1" required>
+                    </label>
+                    <label>Preferred deadline
+                        <input name="deadline" type="date">
+                    </label>
+                    <label class="dimension-field" hidden>Width
+                        <input name="width" type="number" min="0.1" step="0.1" placeholder="e.g. 3">
+                    </label>
+                    <label class="dimension-field" hidden>Height
+                        <input name="height" type="number" min="0.1" step="0.1" placeholder="e.g. 5">
+                    </label>
+                    <label class="material-field" hidden>Preferred material or finish
+                        <input name="material" placeholder="Tell us what you have in mind">
+                    </label>
+                    <label class="event-field" hidden>Event date or details
+                        <input name="eventDetails" placeholder="Optional event details">
+                    </label>
+                    <label class="full-field">Personalized text or design preferences
+                        <textarea name="designPreferences" rows="3"
+                            placeholder="Colors, wording, or other preferences"></textarea>
+                    </label>
+                    <label class="full-field">Artwork or reference file (optional)
+                        <input name="artwork" type="file" accept="image/*,.pdf">
+                        <span class="field-hint">File selection is for preview only; this demo does not upload
+                            files.</span>
+                    </label>
+                    <label class="full-field">Additional instructions
+                        <textarea name="instructions" rows="3"
+                            placeholder="Anything else the shop should know?"></textarea>
+                    </label>
+                </div>
+                <div class="request-review" id="request-review" hidden aria-live="polite"></div>
+                <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+                <div class="request-actions">
+                    <button class="showcase-btn showcase-btn-light" type="button" id="review-request">Review
+                        request</button>
+                    <button class="showcase-btn" type="submit">Submit printing request</button>
+                </div>
+            </form>
+        </dialog>
+    
+    </main>
+
+<footer class="page-footer">
+        <a href="/home">ImPRESSion <span>Printing Works</span></a>
+        <p>Sample designs are demonstrations. Request a quote for pricing.</p>
+    </footer>
+</body>
+
+</html>

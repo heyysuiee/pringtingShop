@@ -992,8 +992,8 @@ img {
 
 .sample-gallery-heading > p {
     max-width: 400px;
-    color: var(--muted);
-    font-size: 13px;
+    color: black;
+    font-size: 16px;
 }
 
 .catalog-shortcuts {
