@@ -135,8 +135,8 @@ img {
     height: 80px;
     overflow: hidden;
     border: 4px solid var(--brown);
-    border-radius: 80%;
-    background: var(--cream);
+    border-radius: 81%;
+    background: var(--white);
     box-shadow: var(--shadow-logo);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }

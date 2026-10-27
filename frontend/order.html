@@ -1,0 +1,326 @@
+<section class="order-page" id="order" aria-labelledby="order-title">
+    <div class="showcase-inner">
+        <!-- Header -->
+        <header class="order-header">
+            <p class="showcase-kicker">Start your print order</p>
+            <h1 id="order-title">Place Your Order</h1>
+            <p>Select your printing service, submit your order details, and we&rsquo;ll guide you through every step.</p>
+        </header>
+
+        <!-- Step indicator -->
+        <div class="step-indicator" id="step-indicator">
+            <div class="step-number active" id="step-num-1">1</div>
+            <div class="step-title" id="step-title-text">Select Service</div>
+        </div>
+        <p class="step-subtitle" id="step-subtitle-text">Choose the printing service you need</p>
+
+        <!-- ===== STEP 1: SERVICE SELECTION ===== -->
+        <section class="order-step active" id="step-1-service">
+            <p class="form-hint">Browse our printing services and select the one you need. Pricing is available by quote for custom orders.</p>
+            <div class="service-grid" id="service-grid">
+                <!-- Service cards injected by JavaScript -->
+            </div>
+            <div class="order-actions" id="step-1-actions" style="margin-top: 30px; display: none;">
+                <button class="btn-primary" type="button" id="next-to-form">Continue to Order Form <span aria-hidden="true">›</span></button>
+            </div>
+        </section>
+        <!-- ===== STEP 2: ORDER FORM ===== -->
+        <section class="order-step" id="step-2-form">
+            <form id="order-form" novalidate>
+                <!-- Customer Information -->
+                <section class="form-section">
+                    <h3>Customer Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full name <span class="required">*</span></label>
+                            <input type="text" name="customerName" autocomplete="name" required placeholder="Juan Dela Cruz">
+                            <span class="error-message" id="err-customerName">Please enter your full name</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Contact number <span class="required">*</span></label>
+                            <input type="tel" name="contactNumber" autocomplete="tel" required placeholder="+63 9XX XXX XXXX">
+                            <span class="error-message" id="err-contactNumber">Please enter a valid contact number</span>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Email address <span class="required">*</span></label>
+                        <input type="email" name="email" autocomplete="email" required placeholder="juan@example.com">
+                        <span class="error-message" id="err-email">Please enter a valid email address</span>
+                    </div>
+                </section>
+
+                <!-- Order Information -->
+                <section class="form-section">
+                    <h3>Order Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Printing service <span class="required">*</span></label>
+                            <select name="service" id="order-service" required>
+                                <option value="">Select a service</option>
+                            </select>
+                            <span class="error-message" id="err-service">Please select a printing service</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Product or item <span class="required">*</span></label>
+                            <select name="product" id="order-product" required>
+                                <option value="">Select a product</option>
+                            </select>
+                            <span class="error-message" id="err-product">Please select a product</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Quantity <span class="required">*</span></label>
+                            <input type="number" name="quantity" min="1" value="1" required>
+                            <span class="error-message" id="err-quantity">Please enter a valid quantity</span>
+                        </div>
+                        <div class="form-group dimension-field conditional-field" id="field-dimensions">
+                            <label>Size / dimensions</label>
+                            <input type="text" name="dimensions" placeholder="e.g. 8x10 inches or A4">
+                            <span class="field-hint">Enter width x height or standard size</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group material-field conditional-field" id="field-material">
+                            <label>Material / paper type</label>
+                            <select name="material">
+                                <option value="">Select material</option>
+                                <option value="matte">Matte paper</option>
+                                <option value="glossy">Glossy paper</option>
+                                <option value="cardstock">Cardstock</option>
+                                <option value="vinyl">Vinyl</option>
+                                <option value="fabric">Fabric</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred customization details</label>
+                            <input type="text" name="customization" placeholder="Colors, finishes, or special requests">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Special instructions</label>
+                        <textarea name="instructions" rows="3" placeholder="Anything else the shop should know about your order?"></textarea>
+                    </div>
+                </section>
+                <!-- Event Information (conditional) -->
+                <section class="form-section conditional-field" id="field-event-info">
+                    <h3>Event Information</h3>
+                    <p class="form-hint">Please provide details for your event so we can personalize your print.</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Celebrant's name / printed name <span class="required">*</span></label>
+                            <input type="text" name="celebrantName" autocomplete="name" required placeholder="Maria Clara">
+                            <span class="error-message" id="err-celebrantName">Please enter the celebrant's name</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Event date <span class="required">*</span></label>
+                            <input type="date" name="eventDate" required>
+                            <span class="error-message" id="err-eventDate">Please select an event date</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Event time</label>
+                            <input type="time" name="eventTime">
+                        </div>
+                        <div class="form-group">
+                            <label>Event location / venue</label>
+                            <input type="text" name="eventVenue" placeholder="e.g. Grand Ballroom, Hotel">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Business/Product details for non-event services -->
+                <section class="form-section conditional-field" id="field-business-info">
+                    <h3>Printing Details</h3>
+                    <p class="form-hint">Please provide the text, business name, or product details to be printed.</p>
+                    <div class="form-group full-width">
+                        <label>Text / business name / product name to print <span class="required">*</span></label>
+                        <input type="text" name="printText" required placeholder="What text should appear on the print?">
+                        <span class="error-message" id="err-printText">Please enter the text to print</span>
+                    </div>
+                </section>
+
+                <!-- Design Reference -->
+                <section class="design-reference">
+                    <h3>Design Reference</h3>
+                    <p class="form-hint">Send us your original, high-quality image or design reference via email.</p>
+
+                    <div class="email-config" id="email-config">
+                        <p>Shop email address:</p>
+                        <span class="email-address" id="shop-email">Not configured</span>
+                    </div>
+
+                    <div class="email-setup-placeholder" id="email-setup-placeholder">
+                        Shop email address is not yet configured. Please contact the shop directly to send your design reference.
+                    </div>
+
+                    <button type="button" class="send-email-btn" id="send-email-btn" disabled>
+                        <span aria-hidden="true">✉</span> Send Image via Email
+                    </button>
+
+                    <div class="design-instructions">
+                        <h4>Important:</h4>
+                        <ul>
+                            <li>Attach your original image file &mdash; do not rely only on compressed chat images.</li>
+                            <li>Include your <strong>order reference number</strong>, <strong>full name</strong>, and <strong>selected service</strong> in the email.</li>
+                            <li>Send high-resolution files for the best print quality.</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group full-width" style="margin-top: 16px;">
+                        <label>
+                            <input type="checkbox" name="willSendDesign" value="yes"> I will send my design reference separately via email
+                        </label>
+                        <span class="field-hint">Check this if you will email your design after submitting this order.</span>
+                    </div>
+                </section>
+
+                <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+
+                <div class="order-actions">
+                    <button type="button" class="btn-secondary" id="back-to-service" style="display: none;">‹ Back to service selection</button>
+                    <button type="submit" class="btn-primary" id="submit-order">Submit Order Request</button>
+                </div>
+            </form>
+        </section>
+        <!-- ===== STEP 3: SUBMISSION RESULT ===== -->
+        <section class="order-step" id="step-3-result">
+            <div class="submission-state" id="submission-loading">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Submitting your order request&hellip;</p>
+                </div>
+            </div>
+            <div class="submission-state" id="submission-success" style="display: none;">
+                <div class="success-state">
+                    <div class="success-icon" aria-hidden="true">✓</div>
+                    <h2 id="success-title">Order Request Submitted</h2>
+                    <p id="success-message">Thank you! Your order request has been received.</p>
+                    <div class="order-reference" id="order-reference-box" style="display: none;">
+                        <p>Your order reference</p>
+                        <span class="ref-code" id="ref-code">-</span>
+                    </div>
+                    <div class="backend-notice" id="backend-notice">
+                        <p><strong>Frontend demo:</strong> This order was not saved. A backend connection is required to process and store orders.</p>
+                        <p>Please contact the shop directly to confirm your order.</p>
+                    </div>
+                </div>
+                <div class="order-actions" style="margin-top: 30px;">
+                    <button type="button" class="btn-secondary" id="view-next-steps">View Next Steps <span aria-hidden="true">›</span></button>
+                </div>
+            </div>
+            <div class="submission-state" id="submission-error" style="display: none;">
+                <div class="error-state">
+                    <h2>Submission Failed</h2>
+                    <p id="error-message">We couldn&rsquo;t submit your order. Please try again.</p>
+                    <button type="button" class="btn-primary" id="retry-order">Try Again</button>
+                </div>
+            </div>
+        </section>
+        <!-- ===== STEPS 4-8: POST-SUBMISSION INFO ===== -->
+        <section class="order-step" id="step-4-images">
+            <div class="payment-section">
+                <h3>Step 4 &mdash; Send Your Design Images</h3>
+                <p class="step-subtitle">Email your high-quality design files to the shop.</p>
+                <div class="email-config" id="email-config-step4">
+                    <p>Shop email address:</p>
+                    <span class="email-address" id="shop-email-step4">Not configured</span>
+                </div>
+                <div class="email-setup-placeholder" id="email-setup-step4">
+                    Shop email address is not yet configured.
+                </div>
+                <button type="button" class="send-email-btn" id="send-email-step4" disabled>
+                    <span aria-hidden="true">✉</span> Send Image via Email
+                </button>
+                <div class="design-instructions">
+                    <h4>Please include in your email:</h4>
+                    <ul>
+                        <li>Your order reference number</li>
+                        <li>Your full name</li>
+                        <li>The selected printing service</li>
+                        <li>Attach the original, high-quality image file (not compressed chat images)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-step" id="step-5-payment">
+            <div class="payment-section">
+                <h3>Step 5 &mdash; Down Payment</h3>
+                <p class="step-subtitle">A 50% down payment is required before production begins.</p>
+                <div id="payment-display">
+                    <div class="awaiting-quotation" id="payment-awaiting">
+                        Awaiting Quotation &mdash; The shop will confirm your total price before payment instructions are provided.
+                    </div>
+                    <div id="payment-calculated" style="display: none;">
+                        <div class="payment-row">
+                            <span class="payment-label">Confirmed total price:</span>
+                            <span class="payment-value" id="total-price">₱0.00</span>
+                        </div>
+                        <div class="payment-row">
+                            <span class="payment-label">50% down payment:</span>
+                            <span class="payment-value highlight" id="down-payment">₱0.00</span>
+                        </div>
+                        <div class="payment-row balance">
+                            <span class="payment-label">Remaining balance:</span>
+                            <span class="payment-value" id="remaining-balance">₱0.00</span>
+                        </div>
+                    </div>
+                    <p class="no-payment-details">Payment account details will be provided by the administrator through the shop&rsquo;s designated communication channel.</p>
+                    <p class="no-payment-details">Down payment will be marked as paid only after the administrator confirms receipt.</p>
+                </div>
+            </div>
+        </section>
+        <section class="order-step" id="step-6-draft">
+            <div class="draft-section">
+                <h3>Step 6 &mdash; Review Draft Layout</h3>
+                <p class="step-subtitle">We will send your draft layout via chat. Please review all details carefully before approving.</p>
+                <div class="approval-warning">
+                    <h3>NO APPROVAL, NO PRINT.</h3>
+                    <p>Printing will not begin until you have approved the final draft layout.</p>
+                </div>
+                <div id="draft-status">
+                    <p style="color: var(--order-text-muted); font-size: 14px;">Draft layout is being prepared by the shop. You will receive it via chat for review.</p>
+                </div>
+                <div class="approval-actions" id="draft-actions" style="display: none; margin-top: 24px;">
+                    <button type="button" class="btn-approve" id="btn-approve-draft">Approve Draft</button>
+                    <button type="button" class="btn-revision" id="btn-request-revision">Request Revision</button>
+                </div>
+                <div class="backend-notice" id="draft-backend-notice" style="margin-top: 16px;">
+                    <p><strong>Frontend demo:</strong> Draft approval actions require a backend connection to record your decision against the correct order and draft version.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-step" id="step-7-production">
+            <div class="production-section">
+                <h3>Step 7 &mdash; Production</h3>
+                <p class="step-subtitle">Once approved, your order proceeds to production.</p>
+                <div class="processing-time">
+                    <h3>Estimated processing time: 2&ndash;5 days</h3>
+                    <p>Incomplete information, pending payment confirmation, requested revisions, or delayed draft approval may affect the schedule.</p>
+                    <p style="font-size: 13px; margin-top: 12px;">A guaranteed completion date will be provided only when confirmed by the shop.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-step" id="step-8-completion">
+            <div class="status-section">
+                <h3>Step 8 &mdash; Order Status</h3>
+                <p class="step-subtitle">Track your order&rsquo;s progress through the workflow.</p>
+                <div class="status-badge status-submitted" id="order-status-badge">
+                    <span aria-hidden="true">●</span> Order Request Submitted
+                </div>
+                <div id="status-detail">
+                    <p style="color: var(--order-text-muted); font-size: 14px;">Your order has been submitted and is awaiting review by the shop administrator.</p>
+                </div>
+                <div class="backend-notice" id="status-backend-notice" style="margin-top: 16px;">
+                    <p><strong>Frontend demo:</strong> Real-time order status tracking requires a backend connection. Contact the shop for updates on your order.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</section>

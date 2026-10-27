@@ -8,7 +8,9 @@
     <title>ImPRESSion PrintShop</title>
 
     <link rel="stylesheet" href="/frontend/home.css">
+    <link rel="stylesheet" href="/frontend/order.css">
     <script src="/frontend/home.js" defer></script>
+    <script src="/frontend/order.js" defer></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,8 +62,8 @@
                 <h2 id="sample-dialog-title"></h2>
                 <p id="sample-dialog-description"></p>
                 <p class="demo-label">Demonstration sample · Pricing available by quote</p>
-                <button class="showcase-btn" type="button" id="sample-dialog-request">Request this design <span
-                        aria-hidden="true">↗</span></button>
+                <a class="showcase-btn" id="sample-dialog-request" href="/order">Request this design <span
+                        aria-hidden="true">↗</span></a>
             </div>
         </dialog>
 
@@ -69,7 +71,7 @@
             <div class="request-dialog-header">
                 <div>
                     <p class="showcase-kicker">Custom printing request</p>
-                    <h2 id="request-dialog-title">Request a quote</h2>
+                    <h2 id="request-dialog-title">Start an order</h2>
                 </div>
                 <button class="dialog-close" type="button" data-close-dialog aria-label="Close quote request">×</button>
             </div>
